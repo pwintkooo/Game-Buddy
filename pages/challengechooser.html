@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ChallengeChooser - Find games that match your difficulty preferences">
+    <title>ChallengeChooser - GameBuddy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html" class="logo" aria-label="GameBuddy Home">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">GameBuddy</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="platformpal.html" class="nav-link">PlatformPal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="modematcher.html" class="nav-link">ModeMatcher</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="budgetbuddy.html" class="nav-link">BudgetBuddy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="genregenie.html" class="nav-link">GenreGenie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="challengechooser.html" class="nav-link active">ChallengeChooser</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="page-hero-icon">⚔️</div>
+                    <h1 class="page-title">ChallengeChooser</h1>
+                    <p class="page-subtitle">
+                        From relaxing casual experiences to punishing hardcore challenges - 
+                        find games that match your skill level and desired intensity perfectly.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Difficulty Spectrum -->
+        <section class="difficulty-spectrum">
+            <div class="container">
+                <h2 class="section-title">Choose Your Challenge Level</h2>
+                <div class="spectrum-slider">
+                    <div class="slider-track">
+                        <div class="slider-fill" id="slider-fill"></div>
+                    </div>
+                    <input type="range" id="difficulty-slider" min="1" max="5" value="3" class="difficulty-input">
+                    <div class="difficulty-labels">
+                        <span class="difficulty-label" data-level="1">Relaxed</span>
+                        <span class="difficulty-label" data-level="2">Easy</span>
+                        <span class="difficulty-label" data-level="3">Balanced</span>
+                        <span class="difficulty-label" data-level="4">Challenging</span>
+                        <span class="difficulty-label" data-level="5">Hardcore</span>
+                    </div>
+                </div>
+                <div class="current-difficulty" id="current-difficulty">
+                    <h3>Current Selection: <span id="difficulty-name">Balanced</span></h3>
+                    <p id="difficulty-description">Perfect balance of challenge and accessibility</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Difficulty Categories -->
+        <section class="difficulty-categories">
+            <div class="container">
+                <h2 class="section-title">Difficulty Categories Explained</h2>
+                <div class="categories-grid">
+                    <div class="difficulty-card" data-difficulty="1">
+                        <div class="difficulty-icon">😌</div>
+                        <h3 class="difficulty-title">Relaxed Gaming</h3>
+                        <div class="difficulty-meter">
+                            <div class="meter-fill" style="width: 20%; background: #4CAF50;"></div>
+                        </div>
+                        <p class="difficulty-desc">
+                            Stress-free experiences focused on exploration, creativity, and enjoyment without pressure.
+                        </p>
+                        <div class="difficulty-features">
+                            <div class="feature">🧘 No time pressure</div>
+                            <div class="feature">💝 Forgiving mechanics</div>
+                            <div class="feature">🎨 Creative freedom</div>
+                            <div class="feature">📖 Story-focused</div>
+                        </div>
+                        <div class="game-examples">
+                            <strong>Perfect Examples:</strong>
+                            <div class="example-tags">
+                                <span class="example-tag">Animal Crossing</span>
+                                <span class="example-tag">Stardew Valley</span>
+                                <span class="example-tag">Journey</span>
+                                <span class="example-tag">Minecraft (Creative)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="difficulty-card" data-difficulty="2">
+                        <div class="difficulty-icon">🙂</div>
+                        <h3 class="difficulty-title">Easy Going</h3>
+                        <div class="difficulty-meter">
+                            <div class="meter-fill" style="width: 40%; background: #8BC34A;"></div>
+                        </div>
+                        <p class="difficulty-desc">
+                            Gentle challenges that help you learn and improve without frustration.
+                        </p>
+                        <div class="difficulty-features">
+                            <div class="feature">📚 Clear tutorials</div>
+                            <div class="feature">🎯 Simple objectives</div>
+                            <div class="feature">💡 Helpful hints</div>
+                            <div class="feature">🔄 Easy retry options</div>
+                        </div>
+                        <div class="game-examples">
+                            <strong>Perfect Examples:</strong>
+                            <div class="example-tags">
+                                <span class="example-tag">Mario Odyssey</span>
+                                <span class="example-tag">Kirby Games</span>
+                                <span class="example-tag">Portal</span>
+                                <span class="example-tag">Unpacking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="difficulty-card" data-difficulty="3" id="balanced-card">
+                        <div class="difficulty-icon">⚖️</div>
+                        <h3 class="difficulty-title">Balanced Challenge</h3>
+                        <div class="difficulty-meter">
+                            <div class="meter-fill" style="width: 60%; background: #FF9800;"></div>
+                        </div>
+                        <p class="difficulty-desc">
+                            The sweet spot - challenging enough to be engaging, accessible enough to stay fun.
+                        </p>
+                        <div class="difficulty-features">
+                            <div class="feature">🎮 Skill progression</div>
+                            <div class="feature">🏆 Fair challenges</div>
+                            <div class="feature">⚙️ Difficulty options</div>
+                            <div class="feature">🎯 Clear goals</div>
+                        </div>
+                        <div class="game-examples">
+                            <strong>Perfect Examples:</strong>
+                            <div class="example-tags">
+                                <span class="example-tag">The Witcher 3</span>
+                                <span class="example-tag">Horizon Zero Dawn</span>
+                                <span class="example-tag">Spider-Man</span>
+                                <span class="example-tag">Ori and the Blind Forest</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="difficulty-card" data-difficulty="4">
+                        <div class="difficulty-icon">🔥</div>
+                        <h3 class="difficulty-title">High Challenge</h3>
+                        <div class="difficulty-meter">
+                            <div class="meter-fill" style="width: 80%; background: #FF5722;"></div>
+                        </div>
+                        <p class="difficulty-desc">
+                            Demanding games that test your skills and require dedication to master.
+                        </p>
+                        <div class="difficulty-features">
+                            <div class="feature">💪 Skill mastery required</div>
+                            <div class="feature">⏱️ Precise timing</div>
+                            <div class="feature">🧠 Strategic thinking</div>
+                            <div class="feature">🔄 Learn from failure</div>
+                        </div>
+                        <div class="game-examples">
+                            <strong>Perfect Examples:</strong>
+                            <div class="example-tags">
+                                <span class="example-tag">Celeste</span>
+                                <span class="example-tag">Hollow Knight</span>
+                                <span class="example-tag">XCOM 2</span>
+                                <span class="example-tag">Bloodborne</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="difficulty-card" data-difficulty="5">
+                        <div class="difficulty-icon">💀</div>
+                        <h3 class="difficulty-title">Hardcore</h3>
+                        <div class="difficulty-meter">
+                            <div class="meter-fill" style="width: 100%; background: #D32F2F;"></div>
+                        </div>
+                        <p class="difficulty-desc">
+                            Punishing experiences for seasoned gamers who crave the ultimate test of skill.
+                        </p>
+                        <div class="difficulty-features">
+                            <div class="feature">🎯 Pixel-perfect precision</div>
+                            <div class="feature">💀 High stakes</div>
+                            <div class="feature">🏆 Elite skill required</div>
+                            <div class="feature">🔥 Unforgiving mechanics</div>
+                        </div>
+                        <div class="game-examples">
+                            <strong>Perfect Examples:</strong>
+                            <div class="example-tags">
+                                <span class="example-tag">Dark Souls</span>
+                                <span class="example-tag">Sekiro</span>
+                                <span class="example-tag">Super Meat Boy</span>
+                                <span class="example-tag">Cuphead</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gaming Skill Assessment -->
+        <section class="skill-assessment">
+            <div class="container">
+                <h2 class="section-title">Gaming Skill Assessment</h2>
+                <p class="section-subtitle">
+                    Not sure about your skill level? Take our quick assessment to find your perfect challenge range!
+                </p>
+                <div class="assessment-container">
+                    <div class="assessment-question active" data-question="1">
+                        <h3>How long have you been gaming?</h3>
+                        <div class="assessment-options">
+                            <button class="assessment-option" data-score="1">
+                                <span class="option-icon">🌱</span>
+                                <span class="option-text">New to gaming (less than 1 year)</span>
+                            </button>
+                            <button class="assessment-option" data-score="2">
+                                <span class="option-icon">🌿</span>
+                                <span class="option-text">Casual gamer (1-3 years)</span>
+                            </button>
+                            <button class="assessment-option" data-score="3">
+                                <span class="option-icon">🌳</span>
+                                <span class="option-text">Regular gamer (3-10 years)</span>
+                            </button>
+                            <button class="assessment-option" data-score="4">
+                                <span class="option-icon">🏆</span>
+                                <span class="option-text">Experienced gamer (10+ years)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="assessment-question" data-question="2">
+                        <h3>When facing a difficult section in a game, you usually...</h3>
+                        <div class="assessment-options">
+                            <button class="assessment-option" data-score="1">
+                                <span class="option-icon">😔</span>
+                                <span class="option-text">Get frustrated and quit</span>
+                            </button>
+                            <button class="assessment-option" data-score="2">
+                                <span class="option-icon">🔄</span>
+                                <span class="option-text">Try a few times then take a break</span>
+                            </button>
+                            <button class="assessment-option" data-score="3">
+                                <span class="option-icon">💪</span>
+                                <span class="option-text">Keep trying until you succeed</span>
+                            </button>
+                            <button class="assessment-option" data-score="4">
+                                <span class="option-icon">🔥</span>
+                                <span class="option-text">Love the challenge and push harder</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="assessment-question" data-question="3">
+                        <h3>Your preferred learning style in games is...</h3>
+                        <div class="assessment-options">
+                            <button class="assessment-option" data-score="1">
+                                <span class="option-icon">📖</span>
+                                <span class="option-text">Detailed tutorials and guides</span>
+                            </button>
+                            <button class="assessment-option" data-score="2">
+                                <span class="option-icon">💡</span>
+                                <span class="option-text">Helpful hints when needed</span>
+                            </button>
+                            <button class="assessment-option" data-score="3">
+                                <span class="option-icon">🧪</span>
+                                <span class="option-text">Trial and error experimentation</span>
+                            </button>
+                            <button class="assessment-option" data-score="4">
+                                <span class="option-icon">🚫</span>
+                                <span class="option-text">Figure it out myself completely</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="assessment-results" id="assessment-results" style="display: none;">
+                        <h3>Your Recommended Challenge Level</h3>
+                        <div class="result-display">
+                            <div class="result-icon" id="result-icon">⚖️</div>
+                            <div class="result-content">
+                                <h4 id="result-level">Balanced Challenge</h4>
+                                <p id="result-description">Perfect balance of challenge and accessibility</p>
+                            </div>
+                        </div>
+                        <div class="result-recommendations" id="result-recommendations"></div>
+                        <button class="cta-button primary" onclick="restartAssessment()">Take Assessment Again</button>
+                    </div>
+
+                    <div class="assessment-navigation">
+                        <button class="assessment-nav-btn" id="prev-assessment-btn" onclick="previousAssessmentQuestion()" disabled>← Previous</button>
+                        <span class="assessment-progress">
+                            <span id="current-assessment-question">1</span> of <span id="total-assessment-questions">3</span>
+                        </span>
+                        <button class="assessment-nav-btn" id="next-assessment-btn" onclick="nextAssessmentQuestion()" disabled>Next →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adaptive Difficulty -->
+        <section class="adaptive-difficulty">
+            <div class="container">
+                <h2 class="section-title">Understanding Adaptive Difficulty</h2>
+                <div class="adaptive-info">
+                    <div class="adaptive-card">
+                        <div class="adaptive-icon">🎯</div>
+                        <h3>What is Adaptive Difficulty?</h3>
+                        <p>
+                            Many modern games automatically adjust their difficulty based on your performance, 
+                            ensuring you're always challenged but never overwhelmed.
+                        </p>
+                    </div>
+                    
+                    <div class="adaptive-card">
+                        <div class="adaptive-icon">📈</div>
+                        <h3>How It Works</h3>
+                        <p>
+                            The game monitors your success rate, reaction times, and decision-making to 
+                            dynamically adjust enemy strength, puzzle complexity, or time limits.
+                        </p>
+                    </div>
+                    
+                    <div class="adaptive-card">
+                        <div class="adaptive-icon">⚙️</div>
+                        <h3>Benefits</h3>
+                        <p>
+                            You stay in the "flow state" - challenged enough to be engaged, 
+                            but not so difficult that you become frustrated or bored.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="adaptive-examples">
+                    <h3>Games with Great Adaptive Difficulty</h3>
+                    <div class="adaptive-games-grid">
+                        <div class="adaptive-game">
+                            <h4>Left 4 Dead 2</h4>
+                            <p>AI Director adjusts zombie spawns based on team performance</p>
+                        </div>
+                        <div class="adaptive-game">
+                            <h4>Resident Evil 4</h4>
+                            <p>Enemy aggression and item drops change based on player skill</p>
+                        </div>
+                        <div class="adaptive-game">
+                            <h4>Mario Kart Series</h4>
+                            <p>Rubber band AI keeps races competitive regardless of skill</p>
+                        </div>
+                        <div class="adaptive-game">
+                            <h4>Flow</h4>
+                            <p>Game speed and complexity adapt to create meditative experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">GameBuddy</span>
+                </div>
+                <p class="footer-text">
+                    Discover your next favorite game with AI-powered recommendations.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script>
+        // Assessment and difficulty selection functionality
+        let currentAssessmentQuestion = 1;
+        let assessmentAnswers = [];
+        const totalAssessmentQuestions = 3;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeDifficultySlider();
+            initializeAssessment();
+            initializeDifficultyCards();
+        });
+
+        function initializeDifficultySlider() {
+            const slider = document.getElementById('difficulty-slider');
+            const sliderFill = document.getElementById('slider-fill');
+            
+            function updateDifficulty(value) {
+                const percentage = ((value - 1) / 4) * 100;
+                sliderFill.style.width = percentage + '%';
+                
+                // Update difficulty display
+                const difficulties = {
+                    1: { name: 'Relaxed', desc: 'Stress-free gaming focused on enjoyment and exploration', icon: '😌' },
+                    2: { name: 'Easy Going', desc: 'Gentle challenges with helpful guidance and forgiving mechanics', icon: '🙂' },
+                    3: { name: 'Balanced', desc: 'Perfect balance of challenge and accessibility for most players', icon: '⚖️' },
+                    4: { name: 'Challenging', desc: 'Demanding gameplay that tests your skills and dedication', icon: '🔥' },
+                    5: { name: 'Hardcore', desc: 'Punishing experiences for elite gamers seeking ultimate tests', icon: '💀' }
+                };
+                
+                const current = difficulties[value];
+                document.getElementById('difficulty-name').textContent = current.name;
+                document.getElementById('difficulty-description').textContent = current.desc;
+                
+                // Update difficulty labels
+                document.querySelectorAll('.difficulty-label').forEach(label => {
+                    label.classList.remove('active');
+                });
+                document.querySelector(`[data-level="${value}"]`).classList.add('active');
+                
+                // Highlight corresponding card
+                highlightDifficultyCard(value);
+            }
+            
+            slider.addEventListener('input', function() {
+                updateDifficulty(this.value);
+            });
+            
+            // Initialize
+            updateDifficulty(slider.value);
+        }
+
+        function highlightDifficultyCard(level) {
+            document.querySelectorAll('.difficulty-card').forEach(card => {
+                card.classList.remove('highlighted');
+            });
+            
+            const targetCard = document.querySelector(`[data-difficulty="${level}"]`);
+            if (targetCard) {
+                targetCard.classList.add('highlighted');
+            }
+        }
+
+        function initializeDifficultyCards() {
+            const cards = document.querySelectorAll('.difficulty-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const difficulty = this.dataset.difficulty;
+                    const slider = document.getElementById('difficulty-slider');
+                    slider.value = difficulty;
+                    slider.dispatchEvent(new Event('input'));
+                    
+                    // Scroll to slider
+                    document.querySelector('.difficulty-spectrum').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        }
+
+        function initializeAssessment() {
+            const assessmentOptions = document.querySelectorAll('.assessment-option');
+            assessmentOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const question = this.closest('.assessment-question');
+                    const questionNum = question.dataset.question;
+                    const score = parseInt(this.dataset.score);
+
+                    // Remove previous selection
+                    question.querySelectorAll('.assessment-option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+
+                    // Add selection to clicked option
+                    this.classList.add('selected');
+
+                    // Store answer
+                    assessmentAnswers[questionNum - 1] = score;
+
+                    // Enable next button
+                    document.getElementById('next-assessment-btn').disabled = false;
+                });
+            });
+        }
+
+        function nextAssessmentQuestion() {
+            if (currentAssessmentQuestion < totalAssessmentQuestions) {
+                // Hide current question
+                document.querySelector(`[data-question="${currentAssessmentQuestion}"]`).classList.remove('active');
+                
+                // Show next question
+                currentAssessmentQuestion++;
+                document.querySelector(`[data-question="${currentAssessmentQuestion}"]`).classList.add('active');
+                
+                // Update navigation
+                updateAssessmentNavigation();
+                
+                // Disable next button until answer is selected
+                document.getElementById('next-assessment-btn').disabled = true;
+                
+                // Check if answer already exists for this question
+                if (assessmentAnswers[currentAssessmentQuestion - 1]) {
+                    const score = assessmentAnswers[currentAssessmentQuestion - 1];
+                    const selectedOption = document.querySelector(`[data-question="${currentAssessmentQuestion}"] .assessment-option[data-score="${score}"]`);
+                    if (selectedOption) {
+                        selectedOption.classList.add('selected');
+                        document.getElementById('next-assessment-btn').disabled = false;
+                    }
+                }
+            } else {
+                showAssessmentResults();
+            }
+        }
+
+        function previousAssessmentQuestion() {
+            if (currentAssessmentQuestion > 1) {
+                document.querySelector(`[data-question="${currentAssessmentQuestion}"]`).classList.remove('active');
+                currentAssessmentQuestion--;
+                document.querySelector(`[data-question="${currentAssessmentQuestion}"]`).classList.add('active');
+                updateAssessmentNavigation();
+                
+                // Check if answer exists for this question
+                if (assessmentAnswers[currentAssessmentQuestion - 1]) {
+                    document.getElementById('next-assessment-btn').disabled = false;
+                }
+            }
+        }
+
+        function updateAssessmentNavigation() {
+            document.getElementById('current-assessment-question').textContent = currentAssessmentQuestion;
+            document.getElementById('prev-assessment-btn').disabled = currentAssessmentQuestion === 1;
+            
+            if (currentAssessmentQuestion === totalAssessmentQuestions) {
+                document.getElementById('next-assessment-btn').textContent = 'See Results →';
+            } else {
+                document.getElementById('next-assessment-btn').textContent = 'Next →';
+            }
+        }
+
+        function showAssessmentResults() {
+            // Hide assessment questions
+            document.querySelectorAll('.assessment-question').forEach(q => q.classList.remove('active'));
+            
+            // Calculate average score
+            const totalScore = assessmentAnswers.reduce((sum, score) => sum + score, 0);
+            const averageScore = Math.round(totalScore / assessmentAnswers.length);
+            
+            // Determine difficulty level
+            const result = getDifficultyRecommendation(averageScore);
+            
+            // Show results
+            document.getElementById('result-icon').textContent = result.icon;
+            document.getElementById('result-level').textContent = result.name;
+            document.getElementById('result-description').textContent = result.description;
+            document.getElementById('result-recommendations').innerHTML = result.recommendations;
+            document.getElementById('assessment-results').style.display = 'block';
+            
+            // Hide navigation
+            document.querySelector('.assessment-navigation').style.display = 'none';
+            
+            // Update main slider
+            const slider = document.getElementById('difficulty-slider');
+            slider.value = averageScore;
+            slider.dispatchEvent(new Event('input'));
+        }
+
+        function getDifficultyRecommendation(score) {
+            const recommendations = {
+                1: {
+                    name: 'Relaxed Gaming',
+                    icon: '😌',
+                    description: 'You prefer stress-free, enjoyable experiences without pressure or frustration.',
+                    recommendations: `
+                        <h4>Perfect Games for You:</h4>
+                        <div class="recommendation-tags">
+                            <span class="rec-tag">Animal Crossing</span>
+                            <span class="rec-tag">Stardew Valley</span>
+                            <span class="rec-tag">Journey</span>
+                            <span class="rec-tag">Abzû</span>
+                            <span class="rec-tag">A Short Hike</span>
+                        </div>
+                    `
+                },
+                2: {
+                    name: 'Easy Going',
+                    icon: '🙂',
+                    description: 'You enjoy gentle challenges with helpful guidance and forgiving mechanics.',
+                    recommendations: `
+                        <h4>Perfect Games for You:</h4>
+                        <div class="recommendation-tags">
+                            <span class="rec-tag">Mario Odyssey</span>
+                            <span class="rec-tag">Kirby Star Allies</span>
+                            <span class="rec-tag">Portal</span>
+                            <span class="rec-tag">Unpacking</span>
+                            <span class="rec-tag">Coffee Talk</span>
+                        </div>
+                    `
+                },
+                3: {
+                    name: 'Balanced Challenge',
+                    icon: '⚖️',
+                    description: 'You want the perfect balance of challenge and accessibility.',
+                    recommendations: `
+                        <h4>Perfect Games for You:</h4>
+                        <div class="recommendation-tags">
+                            <span class="rec-tag">The Witcher 3</span>
+                            <span class="rec-tag">Horizon Zero Dawn</span>
+                            <span class="rec-tag">Spider-Man</span>
+                            <span class="rec-tag">God of War</span>
+                            <span class="rec-tag">Ori and the Blind Forest</span>
+                        </div>
+                    `
+                },
+                4: {
+                    name: 'High Challenge',
+                    icon: '🔥',
+                    description: 'You thrive on demanding gameplay that tests your skills and dedication.',
+                    recommendations: `
+                        <h4>Perfect Games for You:</h4>
+                        <div class="recommendation-tags">
+                            <span class="rec-tag">Celeste</span>
+                            <span class="rec-tag">Hollow Knight</span>
+                            <span class="rec-tag">XCOM 2</span>
+                            <span class="rec-tag">Bloodborne</span>
+                            <span class="rec-tag">Monster Hunter</span>
+                        </div>
+                    `
+                }
+            };
+            
+            return recommendations[score] || recommendations[3];
+        }
+
+        function restartAssessment() {
+            currentAssessmentQuestion = 1;
+            assessmentAnswers = [];
+            
+            // Reset all questions
+            document.querySelectorAll('.assessment-question').forEach(q => {
+                q.classList.remove('active');
+                q.querySelectorAll('.assessment-option').forEach(opt => opt.classList.remove('selected'));
+            });
+            
+            // Show first question
+            document.querySelector('[data-question="1"]').classList.add('active');
+            
+            // Hide results and show navigation
+            document.getElementById('assessment-results').style.display = 'none';
+            document.querySelector('.assessment-navigation').style.display = 'flex';
+            
+            // Reset navigation
+            document.getElementById('current-assessment-question').textContent = '1';
+            document.getElementById('prev-assessment-btn').disabled = true;
+            document.getElementById('next-assessment-btn').disabled = true;
+            document.getElementById('next-assessment-btn').textContent = 'Next →';
+        }
+    </script>
+
+    <style>
+        .page-hero {
+            background: var(--gradient-bg);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: var(--text-white);
+        }
+
+        .page-hero-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .difficulty-spectrum {
+            padding: 80px 0;
+            background: var(--text-white);
+        }
+
+        .spectrum-slider {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .slider-track {
+            height: 12px;
+            background: var(--background-color);
+            border-radius: 6px;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .slider-fill {
+            height: 100%;
+            background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+            border-radius: 6px;
+            transition: var(--transition);
+            width: 50%;
+        }
+
+        .difficulty-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .difficulty-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .difficulty-label {
+            font-size: 0.9rem;
+            color: #666;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .difficulty-label.active {
+            background: var(--accent-color);
+            color: var(--text-white);
+            font-weight: 600;
+        }
+
+        .current-difficulty {
+            text-align: center;
+            background: var(--background-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+        }
+
+        .current-difficulty h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .current-difficulty p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .difficulty-categories {
+            padding: 80px 0;
+            background: var(--background-color);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .difficulty-card {
+            background: var(--text-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 3px solid transparent;
+        }
+
+        .difficulty-card:hover,
+        .difficulty-card.highlighted {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 60px rgba(5, 244, 249, 0.25);
+        }
+
+        .difficulty-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .difficulty-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .difficulty-meter {
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .meter-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .difficulty-desc {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .difficulty-features {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature {
+            background: var(--background-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .game-examples {
+            text-align: left;
+        }
+
+        .game-examples strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .example-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .example-tag {
+            background: var(--accent-color);
+            color: var(--text-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .skill-assessment {
+            padding: 80px 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .assessment-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--text-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 3rem;
+        }
+
+        .assessment-question {
+            display: none;
+        }
+
+        .assessment-question.active {
+            display: block;
+        }
+
+        .assessment-question h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .assessment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .assessment-option {
+            background: var(--background-color);
+            border: 2px solid transparent;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .assessment-option:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .assessment-option.selected {
+            border-color: var(--accent-color);
+            background: rgba(5, 244, 249, 0.15);
+        }
+
+        .option-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .option-text {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .assessment-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .assessment-nav-btn {
+            background: var(--accent-color);
+            color: var(--text-white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .assessment-nav-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .assessment-nav-btn:not(:disabled):hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .assessment-progress {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .assessment-results {
+            text-align: center;
+        }
+
+        .result-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: var(--background-color);
+            border-radius: var(--border-radius);
+        }
+
+        .result-icon {
+            font-size: 4rem;
+        }
+
+        .result-content h4 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-content p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .result-recommendations h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .recommendation-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .rec-tag {
+            background: var(--accent-color);
+            color: var(--text-white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .adaptive-difficulty {
+            padding: 80px 0;
+            background: var(--background-color);
+        }
+
+        .adaptive-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .adaptive-card {
+            background: var(--text-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
+
+        .adaptive-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .adaptive-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .adaptive-examples h3 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .adaptive-games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .adaptive-game {
+            background: var(--text-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .adaptive-game h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .adaptive-game p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .nav-link.active {
+            background: rgba(5, 244, 249, 0.2);
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .assessment-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .assessment-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .result-display {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

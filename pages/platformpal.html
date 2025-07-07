@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PlatformPal - Find the perfect games for your gaming platform">
+    <title>PlatformPal - GameBuddy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html" class="logo" aria-label="GameBuddy Home">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">GameBuddy</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="platformpal.html" class="nav-link active">PlatformPal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="modematcher.html" class="nav-link">ModeMatcher</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="budgetbuddy.html" class="nav-link">BudgetBuddy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="genregenie.html" class="nav-link">GenreGenie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="challengechooser.html" class="nav-link">ChallengeChooser</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="page-hero-icon">🎮</div>
+                    <h1 class="page-title">PlatformPal</h1>
+                    <p class="page-subtitle">
+                        Find amazing games perfectly optimized for your gaming platform. 
+                        Whether you're on PC, console, or mobile - we've got you covered!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Selection -->
+        <section class="platform-selection">
+            <div class="container">
+                <h2 class="section-title">Choose Your Platform</h2>
+                <div class="platforms-grid">
+                    <div class="platform-card" data-platform="pc">
+                        <div class="platform-icon">💻</div>
+                        <h3 class="platform-name">PC Gaming</h3>
+                        <p class="platform-description">
+                            Discover the latest AAA titles, indie gems, and classic games for Windows, Mac, and Linux
+                        </p>
+                        <div class="platform-features">
+                            <span class="feature-tag">Steam</span>
+                            <span class="feature-tag">Epic Games</span>
+                            <span class="feature-tag">GOG</span>
+                        </div>
+                    </div>
+
+                    <div class="platform-card" data-platform="playstation">
+                        <div class="platform-icon">🎮</div>
+                        <h3 class="platform-name">PlayStation</h3>
+                        <p class="platform-description">
+                            Exclusive PlayStation titles and optimized games for PS4 and PS5
+                        </p>
+                        <div class="platform-features">
+                            <span class="feature-tag">PS5 Exclusive</span>
+                            <span class="feature-tag">PS Plus</span>
+                            <span class="feature-tag">4K Gaming</span>
+                        </div>
+                    </div>
+
+                    <div class="platform-card" data-platform="xbox">
+                        <div class="platform-icon">🎯</div>
+                        <h3 class="platform-name">Xbox</h3>
+                        <p class="platform-description">
+                            Game Pass favorites and Xbox exclusive experiences for Series X/S and One
+                        </p>
+                        <div class="platform-features">
+                            <span class="feature-tag">Game Pass</span>
+                            <span class="feature-tag">Smart Delivery</span>
+                            <span class="feature-tag">Quick Resume</span>
+                        </div>
+                    </div>
+
+                    <div class="platform-card" data-platform="nintendo">
+                        <div class="platform-icon">🌟</div>
+                        <h3 class="platform-name">Nintendo Switch</h3>
+                        <p class="platform-description">
+                            Portable gaming perfection with Nintendo's beloved franchises and indie hits
+                        </p>
+                        <div class="platform-features">
+                            <span class="feature-tag">Portable</span>
+                            <span class="feature-tag">Local Co-op</span>
+                            <span class="feature-tag">Family-Friendly</span>
+                        </div>
+                    </div>
+
+                    <div class="platform-card" data-platform="mobile">
+                        <div class="platform-icon">📱</div>
+                        <h3 class="platform-name">Mobile Gaming</h3>
+                        <p class="platform-description">
+                            Engaging games for iOS and Android, perfect for gaming on the go
+                        </p>
+                        <div class="platform-features">
+                            <span class="feature-tag">Free-to-Play</span>
+                            <span class="feature-tag">Offline Play</span>
+                            <span class="feature-tag">Touch Controls</span>
+                        </div>
+                    </div>
+
+                    <div class="platform-card" data-platform="vr">
+                        <div class="platform-icon">🥽</div>
+                        <h3 class="platform-name">VR Gaming</h3>
+                        <p class="platform-description">
+                            Immersive virtual reality experiences for Oculus, SteamVR, and PSVR
+                        </p>
+                        <div class="platform-features">
+                            <span class="feature-tag">Immersive</span>
+                            <span class="feature-tag">Room-Scale</span>
+                            <span class="feature-tag">Motion Controls</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Chat Interface -->
+        <section class="chat-interface">
+            <div class="container">
+                <h2 class="section-title">Chat with PlatformPal AI</h2>
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message bot-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                <p>Hi! I'm PlatformPal AI. Tell me about your gaming setup and I'll recommend the perfect games for your platform!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chat-input" placeholder="e.g., I have a PS5 and love action RPGs..." class="chat-input">
+                        <button id="send-message" class="send-button">
+                            <span>→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">GameBuddy</span>
+                </div>
+                <p class="footer-text">
+                    Discover your next favorite game with AI-powered recommendations.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script>
+        // Platform-specific interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            const platformCards = document.querySelectorAll('.platform-card');
+            const chatInput = document.getElementById('chat-input');
+            const sendButton = document.getElementById('send-message');
+            const chatMessages = document.getElementById('chat-messages');
+
+            // Platform card selection
+            platformCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const platform = this.dataset.platform;
+                    const platformName = this.querySelector('.platform-name').textContent;
+                    
+                    // Remove active class from other cards
+                    platformCards.forEach(c => c.classList.remove('selected'));
+                    
+                    // Add active class to clicked card
+                    this.classList.add('selected');
+                    
+                    // Auto-fill chat input
+                    chatInput.value = `I'm interested in ${platformName} games. What do you recommend?`;
+                    chatInput.focus();
+                });
+            });
+
+            // Simple chat simulation
+            function sendMessage() {
+                const message = chatInput.value.trim();
+                if (!message) return;
+
+                // Add user message
+                addMessage(message, 'user');
+                
+                // Clear input
+                chatInput.value = '';
+                
+                // Simulate AI response
+                setTimeout(() => {
+                    const responses = [
+                        "Great choice! Based on your platform, I'd recommend checking out these popular titles...",
+                        "For your platform, I suggest looking into action-adventure games with great graphics!",
+                        "Perfect! Let me suggest some games that run beautifully on your system...",
+                        "Excellent platform choice! Here are some must-play games optimized for your device..."
+                    ];
+                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                    addMessage(randomResponse, 'bot');
+                }, 1000);
+            }
+
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}-message`;
+                
+                const avatar = document.createElement('div');
+                avatar.className = 'message-avatar';
+                avatar.textContent = sender === 'user' ? '👤' : '🤖';
+                
+                const content = document.createElement('div');
+                content.className = 'message-content';
+                content.innerHTML = `<p>${text}</p>`;
+                
+                messageDiv.appendChild(avatar);
+                messageDiv.appendChild(content);
+                
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            // Send message on button click
+            sendButton.addEventListener('click', sendMessage);
+            
+            // Send message on Enter key
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .page-hero {
+            background: var(--gradient-bg);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: var(--text-white);
+        }
+
+        .page-hero-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .platform-selection {
+            padding: 80px 0;
+        }
+
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .platform-card {
+            background: var(--text-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 3px solid transparent;
+        }
+
+        .platform-card:hover,
+        .platform-card.selected {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 60px rgba(5, 244, 249, 0.25);
+        }
+
+        .platform-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .platform-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .platform-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .feature-tag {
+            background: var(--accent-color);
+            color: var(--text-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .chat-interface {
+            background: var(--background-color);
+            padding: 80px 0;
+        }
+
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--text-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            padding: 2rem;
+            background: #fafafa;
+        }
+
+        .message {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .user-message {
+            flex-direction: row-reverse;
+        }
+
+        .user-message .message-content {
+            background: var(--accent-color);
+            color: var(--text-white);
+            border-radius: 18px;
+            border-top-right-radius: 6px;
+        }
+
+        .bot-message .message-content {
+            background: var(--text-white);
+            border-radius: 18px;
+            border-top-left-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .chat-input-container {
+            padding: 1.5rem;
+            background: var(--text-white);
+            display: flex;
+            gap: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid #eee;
+            border-radius: 25px;
+            outline: none;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .chat-input:focus {
+            border-color: var(--accent-color);
+        }
+
+        .nav-link.active {
+            background: rgba(5, 244, 249, 0.2);
+            color: var(--accent-color);
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameBuddy - Discover your next favorite game through AI-powered recommendations">
+    <title>GameBuddy - AI Game Discovery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo" aria-label="GameBuddy Home">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">GameBuddy</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="pages/platformpal.html" class="nav-link">PlatformPal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/modematcher.html" class="nav-link">ModeMatcher</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/budgetbuddy.html" class="nav-link">BudgetBuddy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/genregenie.html" class="nav-link">GenreGenie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/challengechooser.html" class="nav-link">ChallengeChooser</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Discover Your Next
+                        <span class="highlight">Favorite Game</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Let our AI-powered chatbot understand your playstyle, time, and preferences 
+                        to recommend the perfect games just for you.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="cta-button primary" id="start-chat">
+                            Start Game Discovery
+                        </button>
+                        <button class="cta-button secondary" id="learn-more">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Chatbot Preview -->
+                <div class="chatbot-preview" id="chatbot-preview">
+                    <div class="chatbot-window">
+                        <div class="chatbot-header">
+                            <div class="chatbot-status">
+                                <span class="status-dot"></span>
+                                <span class="status-text">GameBuddy AI</span>
+                            </div>
+                        </div>
+                        <div class="chatbot-messages">
+                            <div class="message bot-message">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-content">
+                                    <p class="typing-text" id="typing-text">Hi! I'm your GameBuddy AI. What type of gaming experience are you looking for today?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chatbot-input">
+                            <input type="text" placeholder="Type your gaming preferences..." disabled>
+                            <button class="send-button" disabled>
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">How GameBuddy Helps You</h2>
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up">
+                        <div class="feature-icon">🎯</div>
+                        <h3 class="feature-title">Personalized Recommendations</h3>
+                        <p class="feature-description">
+                            Our AI learns your preferences and suggests games tailored to your unique playstyle.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">Instant Results</h3>
+                        <p class="feature-description">
+                            No more endless browsing. Get game recommendations in seconds through natural conversation.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">🧠</div>
+                        <h3 class="feature-title">Smart Filtering</h3>
+                        <p class="feature-description">
+                            Tell us your time, budget, and mood - we'll find games that fit perfectly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discovery Tools Section -->
+        <section class="discovery-tools" id="discovery-tools">
+            <div class="container">
+                <h2 class="section-title">Choose Your Discovery Path</h2>
+                <div class="tools-grid">
+                    <a href="pages/platformpal.html" class="tool-card" data-aos="zoom-in">
+                        <div class="tool-icon">🎮</div>
+                        <h3 class="tool-title">PlatformPal</h3>
+                        <p class="tool-description">Find games for your PC, Xbox, PlayStation, Switch, or mobile device</p>
+                        <span class="tool-arrow">→</span>
+                    </a>
+                    
+                    <a href="pages/modematcher.html" class="tool-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="tool-icon">👥</div>
+                        <h3 class="tool-title">ModeMatcher</h3>
+                        <p class="tool-description">Discover solo adventures, co-op experiences, or multiplayer battles</p>
+                        <span class="tool-arrow">→</span>
+                    </a>
+                    
+                    <a href="pages/budgetbuddy.html" class="tool-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="tool-icon">💰</div>
+                        <h3 class="tool-title">BudgetBuddy</h3>
+                        <p class="tool-description">Find amazing games within your spending range</p>
+                        <span class="tool-arrow">→</span>
+                    </a>
+                    
+                    <a href="pages/genregenie.html" class="tool-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="tool-icon">🎭</div>
+                        <h3 class="tool-title">GenreGenie</h3>
+                        <p class="tool-description">Explore RPGs, action games, puzzles, and more</p>
+                        <span class="tool-arrow">→</span>
+                    </a>
+                    
+                    <a href="pages/challengechooser.html" class="tool-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="tool-icon">⚔️</div>
+                        <h3 class="tool-title">ChallengeChooser</h3>
+                        <p class="tool-description">From casual fun to hardcore challenges</p>
+                        <span class="tool-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">GameBuddy</span>
+                </div>
+                <p class="footer-text">
+                    Discover your next favorite game with AI-powered recommendations.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BudgetBuddy - Find amazing games within your budget">
+    <title>BudgetBuddy - GameBuddy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html" class="logo" aria-label="GameBuddy Home">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">GameBuddy</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="platformpal.html" class="nav-link">PlatformPal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="modematcher.html" class="nav-link">ModeMatcher</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="budgetbuddy.html" class="nav-link active">BudgetBuddy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="genregenie.html" class="nav-link">GenreGenie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="challengechooser.html" class="nav-link">ChallengeChooser</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="page-hero-icon">💰</div>
+                    <h1 class="page-title">BudgetBuddy</h1>
+                    <p class="page-subtitle">
+                        Great games don't have to break the bank! Find incredible gaming experiences 
+                        that fit perfectly within your budget - from free gems to premium adventures.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Budget Selector -->
+        <section class="budget-selector">
+            <div class="container">
+                <h2 class="section-title">What's Your Gaming Budget?</h2>
+                <div class="budget-slider-container">
+                    <div class="budget-display">
+                        <span class="budget-label">Budget Range:</span>
+                        <span class="budget-amount" id="budget-amount">$0 - $20</span>
+                    </div>
+                    <div class="slider-wrapper">
+                        <input type="range" id="budget-slider" min="0" max="100" value="20" class="budget-slider">
+                        <div class="slider-labels">
+                            <span>Free</span>
+                            <span>$25</span>
+                            <span>$50</span>
+                            <span>$75</span>
+                            <span>$100+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Budget Categories -->
+        <section class="budget-categories">
+            <div class="container">
+                <h2 class="section-title">Gaming Budget Categories</h2>
+                <div class="categories-grid">
+                    <div class="budget-card" data-budget="free">
+                        <div class="budget-icon">🆓</div>
+                        <h3 class="budget-title">Free to Play</h3>
+                        <div class="budget-range">$0</div>
+                        <p class="budget-description">
+                            Discover amazing games that cost absolutely nothing! High-quality experiences without spending a dime.
+                        </p>
+                        <div class="budget-features">
+                            <div class="feature">✅ Completely Free</div>
+                            <div class="feature">🎮 Full Gaming Experience</div>
+                            <div class="feature">🏆 Competitive Options</div>
+                            <div class="feature">👥 Multiplayer Focus</div>
+                        </div>
+                        <div class="example-games">
+                            <strong>Popular Examples:</strong>
+                            <div class="game-examples">
+                                <span class="game-tag">Fortnite</span>
+                                <span class="game-tag">Valorant</span>
+                                <span class="game-tag">Apex Legends</span>
+                                <span class="game-tag">Genshin Impact</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="budget-card" data-budget="budget">
+                        <div class="budget-icon">💵</div>
+                        <h3 class="budget-title">Budget Gaming</h3>
+                        <div class="budget-range">$1 - $20</div>
+                        <p class="budget-description">
+                            Incredible value games that deliver hours of entertainment without breaking the bank.
+                        </p>
+                        <div class="budget-features">
+                            <div class="feature">💸 Great Value</div>
+                            <div class="feature">⏱️ Hours of Content</div>
+                            <div class="feature">🏷️ Frequent Sales</div>
+                            <div class="feature">🎯 Indie Gems</div>
+                        </div>
+                        <div class="example-games">
+                            <strong>Popular Examples:</strong>
+                            <div class="game-examples">
+                                <span class="game-tag">Stardew Valley</span>
+                                <span class="game-tag">Terraria</span>
+                                <span class="game-tag">Among Us</span>
+                                <span class="game-tag">Fall Guys</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="budget-card" data-budget="mid">
+                        <div class="budget-icon">💳</div>
+                        <h3 class="budget-title">Mid-Range</h3>
+                        <div class="budget-range">$20 - $40</div>
+                        <p class="budget-description">
+                            Quality games with polished gameplay, engaging stories, and solid production values.
+                        </p>
+                        <div class="budget-features">
+                            <div class="feature">🎮 Polished Experience</div>
+                            <div class="feature">📖 Rich Content</div>
+                            <div class="feature">🎨 Quality Graphics</div>
+                            <div class="feature">🔄 Regular Updates</div>
+                        </div>
+                        <div class="example-games">
+                            <strong>Popular Examples:</strong>
+                            <div class="game-examples">
+                                <span class="game-tag">Hades</span>
+                                <span class="game-tag">Disco Elysium</span>
+                                <span class="game-tag">Deep Rock Galactic</span>
+                                <span class="game-tag">Ori Series</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="budget-card" data-budget="premium">
+                        <div class="budget-icon">💎</div>
+                        <h3 class="budget-title">Premium Gaming</h3>
+                        <div class="budget-range">$40 - $70</div>
+                        <p class="budget-description">
+                            AAA blockbusters with cutting-edge graphics, epic stories, and massive worlds to explore.
+                        </p>
+                        <div class="budget-features">
+                            <div class="feature">🚀 Latest Technology</div>
+                            <div class="feature">🌍 Massive Worlds</div>
+                            <div class="feature">🎬 Cinematic Experience</div>
+                            <div class="feature">📦 Complete Package</div>
+                        </div>
+                        <div class="example-games">
+                            <strong>Popular Examples:</strong>
+                            <div class="game-examples">
+                                <span class="game-tag">Elden Ring</span>
+                                <span class="game-tag">Cyberpunk 2077</span>
+                                <span class="game-tag">Horizon Forbidden West</span>
+                                <span class="game-tag">The Witcher 3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Money-Saving Tips -->
+        <section class="money-saving-tips">
+            <div class="container">
+                <h2 class="section-title">Smart Gaming on a Budget</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">🏷️</div>
+                        <h3 class="tip-title">Watch for Sales</h3>
+                        <p class="tip-description">
+                            Follow seasonal sales like Steam Summer Sale, Epic Games Store sales, and console store discounts. Games can be up to 80% off!
+                        </p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">📅</div>
+                        <h3 class="tip-title">Game Pass & Subscriptions</h3>
+                        <p class="tip-description">
+                            Xbox Game Pass, PlayStation Plus, and EA Play offer hundreds of games for a monthly fee. Great value for variety!
+                        </p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">💝</div>
+                        <h3 class="tip-title">Free Weekly Games</h3>
+                        <p class="tip-description">
+                            Epic Games Store gives away free games every week. Steam and other platforms also offer free games occasionally.
+                        </p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">🔍</div>
+                        <h3 class="tip-title">Compare Prices</h3>
+                        <p class="tip-description">
+                            Use price comparison sites to find the best deals across different stores and regions. Never pay full price!
+                        </p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">👥</div>
+                        <h3 class="tip-title">Share & Trade</h3>
+                        <p class="tip-description">
+                            Family sharing on Steam, game trading communities, and local game swaps can help you play more for less.
+                        </p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">⏰</div>
+                        <h3 class="tip-title">Patient Gaming</h3>
+                        <p class="tip-description">
+                            Wait 6-12 months after release. Games often drop in price significantly and come with all DLC included.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Budget Calculator -->
+        <section class="budget-calculator">
+            <div class="container">
+                <h2 class="section-title">Gaming Budget Calculator</h2>
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label for="monthly-income">Monthly Gaming Budget ($):</label>
+                            <input type="number" id="monthly-income" min="0" max="1000" value="50" class="calculator-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gaming-frequency">How often do you buy games?</label>
+                            <select id="gaming-frequency" class="calculator-input">
+                                <option value="1">Every month</option>
+                                <option value="2">Every 2 months</option>
+                                <option value="3">Every 3 months</option>
+                                <option value="6">Every 6 months</option>
+                                <option value="12">Once a year</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="game-type">Preferred game type:</label>
+                            <select id="game-type" class="calculator-input">
+                                <option value="new">New releases ($60+)</option>
+                                <option value="recent">Recent games ($30-60)</option>
+                                <option value="older">Older games ($10-30)</option>
+                                <option value="indie">Indie games ($5-20)</option>
+                                <option value="free">Free-to-play</option>
+                            </select>
+                        </div>
+
+                        <button class="calculate-btn" onclick="calculateBudget()">Calculate My Gaming Plan</button>
+                    </div>
+
+                    <div class="calculator-results" id="calculator-results">
+                        <h3>Your Personalized Gaming Plan</h3>
+                        <div class="result-item">
+                            <span class="result-label">Budget per game:</span>
+                            <span class="result-value" id="per-game-budget">$0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Games per year:</span>
+                            <span class="result-value" id="games-per-year">0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Recommended category:</span>
+                            <span class="result-value" id="recommended-category">Budget Gaming</span>
+                        </div>
+                        <div class="result-recommendations" id="result-recommendations">
+                            <!-- Dynamic recommendations will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">GameBuddy</span>
+                </div>
+                <p class="footer-text">
+                    Discover your next favorite game with AI-powered recommendations.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeBudgetSlider();
+            initializeBudgetCards();
+        });
+
+        function initializeBudgetSlider() {
+            const slider = document.getElementById('budget-slider');
+            const budgetAmount = document.getElementById('budget-amount');
+            
+            function updateBudgetDisplay(value) {
+                let range;
+                if (value <= 0) range = 'Free';
+                else if (value <= 20) range = `$0 - $${value}`;
+                else if (value <= 40) range = `$${value-20} - $${value}`;
+                else if (value <= 60) range = `$${value-20} - $${value}`;
+                else if (value <= 80) range = `$${value-20} - $${value}`;
+                else range = `$${value}+`;
+                
+                budgetAmount.textContent = range;
+                
+                // Highlight corresponding budget card
+                highlightBudgetCard(value);
+            }
+            
+            slider.addEventListener('input', function() {
+                updateBudgetDisplay(this.value);
+            });
+            
+            // Initialize
+            updateBudgetDisplay(slider.value);
+        }
+
+        function highlightBudgetCard(value) {
+            const cards = document.querySelectorAll('.budget-card');
+            cards.forEach(card => card.classList.remove('highlighted'));
+            
+            let category;
+            if (value <= 0) category = 'free';
+            else if (value <= 25) category = 'budget';
+            else if (value <= 50) category = 'mid';
+            else category = 'premium';
+            
+            const targetCard = document.querySelector(`[data-budget="${category}"]`);
+            if (targetCard) {
+                targetCard.classList.add('highlighted');
+            }
+        }
+
+        function initializeBudgetCards() {
+            const cards = document.querySelectorAll('.budget-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Remove highlight from all cards
+                    cards.forEach(c => c.classList.remove('selected'));
+                    
+                    // Add selection to clicked card
+                    this.classList.add('selected');
+                    
+                    // Update slider based on selection
+                    const budget = this.dataset.budget;
+                    const slider = document.getElementById('budget-slider');
+                    
+                    switch(budget) {
+                        case 'free':
+                            slider.value = 0;
+                            break;
+                        case 'budget':
+                            slider.value = 20;
+                            break;
+                        case 'mid':
+                            slider.value = 40;
+                            break;
+                        case 'premium':
+                            slider.value = 70;
+                            break;
+                    }
+                    
+                    // Update display
+                    slider.dispatchEvent(new Event('input'));
+                });
+            });
+        }
+
+        function calculateBudget() {
+            const monthlyBudget = parseFloat(document.getElementById('monthly-income').value) || 0;
+            const frequency = parseInt(document.getElementById('gaming-frequency').value) || 1;
+            const gameType = document.getElementById('game-type').value;
+            
+            const budgetPerPurchase = monthlyBudget * frequency;
+            const gamesPerYear = Math.floor(12 / frequency);
+            
+            // Determine how many games they can afford per purchase based on game type
+            let gamesPerPurchase = 1;
+            let category = 'Budget Gaming';
+            
+            if (gameType === 'free') {
+                gamesPerPurchase = '∞';
+                category = 'Free-to-Play';
+            } else if (gameType === 'indie') {
+                gamesPerPurchase = Math.floor(budgetPerPurchase / 15);
+                category = 'Indie Gaming';
+            } else if (gameType === 'older') {
+                gamesPerPurchase = Math.floor(budgetPerPurchase / 20);
+                category = 'Patient Gaming';
+            } else if (gameType === 'recent') {
+                gamesPerPurchase = Math.floor(budgetPerPurchase / 45);
+                category = 'Mid-Range Gaming';
+            } else if (gameType === 'new') {
+                gamesPerPurchase = Math.floor(budgetPerPurchase / 60);
+                category = 'Premium Gaming';
+            }
+            
+            // Update results
+            document.getElementById('per-game-budget').textContent = `$${budgetPerPurchase.toFixed(0)}`;
+            document.getElementById('games-per-year').textContent = 
+                gamesPerPurchase === '∞' ? '∞' : (gamesPerPurchase * gamesPerYear);
+            document.getElementById('recommended-category').textContent = category;
+            
+            // Generate recommendations
+            generateRecommendations(budgetPerPurchase, gameType, category);
+            
+            // Show results
+            document.getElementById('calculator-results').style.display = 'block';
+        }
+
+        function generateRecommendations(budget, gameType, category) {
+            const recommendations = document.getElementById('result-recommendations');
+            let content = '<h4>Personalized Recommendations:</h4><div class="recommendations-list">';
+            
+            if (gameType === 'free') {
+                content += `
+                    <div class="recommendation">🎮 Focus on free-to-play games with optional cosmetics</div>
+                    <div class="recommendation">🏆 Try competitive games like Valorant, Apex Legends</div>
+                    <div class="recommendation">🌟 Explore mobile games and browser games</div>
+                `;
+            } else if (budget < 20) {
+                content += `
+                    <div class="recommendation">🏷️ Wait for sales and bundle deals</div>
+                    <div class="recommendation">🎮 Focus on indie games with high replay value</div>
+                    <div class="recommendation">📅 Consider Game Pass or similar subscriptions</div>
+                `;
+            } else if (budget < 50) {
+                content += `
+                    <div class="recommendation">🎯 Mix of indie gems and older AAA titles</div>
+                    <div class="recommendation">📦 Look for complete editions with DLC included</div>
+                    <div class="recommendation">⏰ Practice patient gaming - wait 6 months for price drops</div>
+                `;
+            } else {
+                content += `
+                    <div class="recommendation">🚀 You can afford new releases occasionally</div>
+                    <div class="recommendation">💎 Focus on highly-rated games for best value</div>
+                    <div class="recommendation">🎮 Consider pre-ordering games you're excited about</div>
+                `;
+            }
+            
+            content += '</div>';
+            recommendations.innerHTML = content;
+        }
+    </script>
+
+    <style>
+        .page-hero {
+            background: var(--gradient-bg);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: var(--text-white);
+        }
+
+        .page-hero-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .budget-selector {
+            padding: 80px 0;
+            background: var(--text-white);
+        }
+
+        .budget-slider-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .budget-display {
+            margin-bottom: 2rem;
+        }
+
+        .budget-label {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+
+        .budget-amount {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .slider-wrapper {
+            position: relative;
+        }
+
+        .budget-slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: var(--background-color);
+            outline: none;
+            -webkit-appearance: none;
+            margin-bottom: 1rem;
+        }
+
+        .budget-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(77, 208, 225, 0.3);
+        }
+
+        .budget-slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            cursor: pointer;
+            border: none;
+        }
+
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .budget-categories {
+            padding: 80px 0;
+            background: var(--background-color);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .budget-card {
+            background: var(--text-white);
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 3px solid transparent;
+            position: relative;
+        }
+
+        .budget-card:hover,
+        .budget-card.highlighted,
+        .budget-card.selected {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 60px rgba(5, 244, 249, 0.25);
+        }
+
+        .budget-card.highlighted {
+            border-color: var(--secondary-color);
+        }
+
+        .budget-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .budget-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .budget-range {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .budget-description {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .budget-features {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature {
+            background: var(--background-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .example-games {
+            text-align: left;
+        }
+
+        .example-games strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .game-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .game-tag {
+            background: var(--accent-color);
+            color: var(--text-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .money-saving-tips {
+            padding: 80px 0;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tip-card {
+            background: var(--text-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(30, 30, 47, 0.1);
+        }
+
+        .tip-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tip-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .tip-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .budget-calculator {
+            padding: 80px 0;
+            background: var(--background-color);
+        }
+
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .calculator-form {
+            background: var(--text-white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .calculator-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #eee;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .calculator-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .calculate-btn {
+            background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+            color: var(--text-white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transition);
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(5, 244, 249, 0.4);
+        }
+
+        .calculator-results {
+            background: var(--text-white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            display: none;
+        }
+
+        .calculator-results h3 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--background-color);
+            border-radius: var(--border-radius);
+        }
+
+        .result-label {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .result-value {
+            font-weight: 600;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .result-recommendations {
+            margin-top: 2rem;
+        }
+
+        .result-recommendations h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .recommendations-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .recommendation {
+            padding: 0.75rem 1rem;
+            background: rgba(5, 244, 249, 0.15);
+            border-radius: var(--border-radius);
+            font-size: 0.95rem;
+        }
+
+        .nav-link.active {
+            background: rgba(5, 244, 249, 0.2);
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .calculator-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .categories-grid,
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

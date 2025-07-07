@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GenreGenie - Explore games by genre and discover new favorites">
+    <title>GenreGenie - GameBuddy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html" class="logo" aria-label="GameBuddy Home">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">GameBuddy</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="platformpal.html" class="nav-link">PlatformPal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="modematcher.html" class="nav-link">ModeMatcher</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="budgetbuddy.html" class="nav-link">BudgetBuddy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="genregenie.html" class="nav-link active">GenreGenie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="challengechooser.html" class="nav-link">ChallengeChooser</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="page-hero-icon">🎭</div>
+                    <h1 class="page-title">GenreGenie</h1>
+                    <p class="page-subtitle">
+                        Discover your gaming DNA! Explore different genres, find your favorites, 
+                        and get personalized recommendations based on what makes you tick.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Genre Explorer -->
+        <section class="genre-explorer">
+            <div class="container">
+                <h2 class="section-title">Explore Gaming Genres</h2>
+                <div class="genres-grid">
+                    <div class="genre-card" data-genre="action">
+                        <div class="genre-icon">⚔️</div>
+                        <h3 class="genre-name">Action</h3>
+                        <p class="genre-description">
+                            Fast-paced gameplay with combat, reflexes, and adrenaline-pumping moments.
+                        </p>
+                        <div class="genre-tags">
+                            <span class="tag">Combat</span>
+                            <span class="tag">Reflexes</span>
+                            <span class="tag">Intensity</span>
+                        </div>
+                        <div class="popular-games">
+                            <strong>Popular:</strong> Call of Duty, Doom, Devil May Cry
+                        </div>
+                    </div>
+
+                    <div class="genre-card" data-genre="rpg">
+                        <div class="genre-icon">🐉</div>
+                        <h3 class="genre-name">RPG</h3>
+                        <p class="genre-description">
+                            Deep character development, immersive stories, and progression systems.
+                        </p>
+                        <div class="genre-tags">
+                            <span class="tag">Story</span>
+                            <span class="tag">Character Growth</span>
+                            <span class="tag">Exploration</span>
+                        </div>
+                        <div class="popular-games">
+                            <strong>Popular:</strong> The Witcher 3, Final Fantasy, Skyrim
+                        </div>
+                    </div>
+
+                    <div class="genre-card" data-genre="strategy">
+                        <div class="genre-icon">♟️</div>
+                        <h3 class="genre-name">Strategy</h3>
+                        <p class="genre-description">
+                            Tactical thinking, resource management, and long-term planning.
+                        </p>
+                        <div class="genre-tags">
+                            <span class="tag">Tactics</span>
+                            <span class="tag">Planning</span>
+                            <span class="tag">Management</span>
+                        </div>
+                        <div class="popular-games">
+                            <strong>Popular:</strong> Civilization VI, Age of Empires, XCOM
+                        </div>
+                    </div>
+
+                    <div class="genre-card" data-genre="puzzle">
+                        <div class="genre-icon">🧩</div>
+                        <h3 class="genre-name">Puzzle</h3>
+                        <p class="genre-description">
+                            Brain teasers, logical thinking, and satisfying problem-solving.
+                        </p>
+                        <div class="genre-tags">
+                            <span class="tag">Logic</span>
+                            <span class="tag">Problem Solving</span>
+                            <span class="tag">Relaxing</span>
+                        </div>
+                        <div class="popular-games">
+                            <strong>Popular:</strong> Portal, Tetris, The Witness
+                        </div>
+                    </div>
+
+                    <div class="genre-card" data-genre="adventure">
+                        <div class="genre-icon">🗺️</div>
+                        <h3 class="genre-name">Adventure</h3>
+                        <p class="genre-description">
+                            Exploration, discovery, and narrative-driven experiences.
+                        </p>
+                        <div class="genre-tags">
+                            <span class="tag">Exploration</span>
+                            <span class="tag">Narrative</span>
+                            <span class="tag">Discovery</span>
+                        </div>
+                        <div class="popular-games">
+                            <strong>Popular:</strong> Uncharted, Life is Strange, Zelda
+                        </div>
+                    </div>
+
+                    <div class="genre-card" data-genre="simulation">
+                        <div class="genre-icon">🏗️</div>
+                        <h3 class="genre-name">Simulation</h3>
+                        <p class="genre-description">
+                            Build, manage, and create in realistic or fantastical worlds.
+                        </p>
+                        <div class="genre-tags">
+                            <span class="tag">Building</span>
+                            <span class="tag">Management</span>
+                            <span class="tag">Creativity</span>
+                        </div>
+                        <div class="popular-games">
+                            <strong>Popular:</strong> SimCity, Cities: Skylines, The Sims
+                        </div>
+                    </div>
+
+                    <div class="genre-card" data-genre="sports">
+                        <div class="genre-icon">⚽</div>
+                        <h3 class="genre-name">Sports</h3>
+                        <p class="genre-description">
+                            Athletic competition, skill mastery, and competitive gameplay.
+                        </p>
+                        <div class="genre-tags">
+                            <span class="tag">Competition</span>
+                            <span class="tag">Skill</span>
+                            <span class="tag">Realistic</span>
+                        </div>
+                        <div class="popular-games">
+                            <strong>Popular:</strong> FIFA, NBA 2K, Rocket League
+                        </div>
+                    </div>
+
+                    <div class="genre-card" data-genre="horror">
+                        <div class="genre-icon">👻</div>
+                        <h3 class="genre-name">Horror</h3>
+                        <p class="genre-description">
+                            Suspense, fear, and atmospheric experiences that thrill and chill.
+                        </p>
+                        <div class="genre-tags">
+                            <span class="tag">Suspense</span>
+                            <span class="tag">Atmosphere</span>
+                            <span class="tag">Thrills</span>
+                        </div>
+                        <div class="popular-games">
+                            <strong>Popular:</strong> Resident Evil, Silent Hill, Phasmophobia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Genre Personality Test -->
+        <section class="genre-personality">
+            <div class="container">
+                <h2 class="section-title">Discover Your Gaming Personality</h2>
+                <div class="personality-test">
+                    <div class="test-question active" data-question="1">
+                        <h3>What motivates you most in games?</h3>
+                        <div class="personality-options">
+                            <button class="personality-option" data-answer="achievement">
+                                <div class="option-icon">🏆</div>
+                                <div class="option-content">
+                                    <h4>Achievement</h4>
+                                    <p>Completing challenges, earning trophies, mastering skills</p>
+                                </div>
+                            </button>
+                            <button class="personality-option" data-answer="story">
+                                <div class="option-icon">📚</div>
+                                <div class="option-content">
+                                    <h4>Story & Immersion</h4>
+                                    <p>Rich narratives, character development, emotional experiences</p>
+                                </div>
+                            </button>
+                            <button class="personality-option" data-answer="social">
+                                <div class="option-icon">👥</div>
+                                <div class="option-content">
+                                    <h4>Social Connection</h4>
+                                    <p>Playing with friends, community, shared experiences</p>
+                                </div>
+                            </button>
+                            <button class="personality-option" data-answer="creativity">
+                                <div class="option-icon">🎨</div>
+                                <div class="option-content">
+                                    <h4>Creativity & Building</h4>
+                                    <p>Creating, building, expressing yourself in virtual worlds</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="test-question" data-question="2">
+                        <h3>How do you prefer to spend your gaming time?</h3>
+                        <div class="personality-options">
+                            <button class="personality-option" data-answer="quick">
+                                <div class="option-icon">⚡</div>
+                                <div class="option-content">
+                                    <h4>Quick Sessions</h4>
+                                    <p>15-30 minute bursts of gaming between other activities</p>
+                                </div>
+                            </button>
+                            <button class="personality-option" data-answer="medium">
+                                <div class="option-icon">🕐</div>
+                                <div class="option-content">
+                                    <h4>Focused Sessions</h4>
+                                    <p>1-2 hours of dedicated gaming time</p>
+                                </div>
+                            </button>
+                            <button class="personality-option" data-answer="long">
+                                <div class="option-icon">🌙</div>
+                                <div class="option-content">
+                                    <h4>Deep Dives</h4>
+                                    <p>3+ hours of immersive gaming experiences</p>
+                                </div>
+                            </button>
+                            <button class="personality-option" data-answer="flexible">
+                                <div class="option-icon">🔄</div>
+                                <div class="option-content">
+                                    <h4>Flexible</h4>
+                                    <p>Varies based on the game and my mood</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="test-question" data-question="3">
+                        <h3>What's your ideal gaming challenge level?</h3>
+                        <div class="personality-options">
+                            <button class="personality-option" data-answer="relaxed">
+                                <div class="option-icon">😌</div>
+                                <div class="option-content">
+                                    <h4>Relaxed & Chill</h4>
+                                    <p>Low stress, casual difficulty, focus on fun</p>
+                                </div>
+                            </button>
+                            <button class="personality-option" data-answer="moderate">
+                                <div class="option-icon">⚖️</div>
+                                <div class="option-content">
+                                    <h4>Balanced Challenge</h4>
+                                    <p>Some difficulty but not frustrating</p>
+                                </div>
+                            </button>
+                            <button class="personality-option" data-answer="challenging">
+                                <div class="option-icon">🔥</div>
+                                <div class="option-content">
+                                    <h4>High Challenge</h4>
+                                    <p>Difficult games that test my skills</p>
+                                </div>
+                            </button>
+                            <button class="personality-option" data-answer="hardcore">
+                                <div class="option-icon">⚔️</div>
+                                <div class="option-content">
+                                    <h4>Hardcore</h4>
+                                    <p>Punishing difficulty, perfection required</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="test-results" id="personality-results" style="display: none;">
+                        <h3>Your Gaming Personality: <span id="personality-type"></span></h3>
+                        <div class="personality-description" id="personality-description"></div>
+                        <div class="recommended-genres" id="recommended-genres"></div>
+                        <button class="cta-button primary" onclick="restartPersonalityTest()">Take Test Again</button>
+                    </div>
+
+                    <div class="test-navigation">
+                        <button class="test-nav-btn" id="prev-personality-btn" onclick="previousPersonalityQuestion()" disabled>← Previous</button>
+                        <span class="test-progress">
+                            <span id="current-personality-question">1</span> of <span id="total-personality-questions">3</span>
+                        </span>
+                        <button class="test-nav-btn" id="next-personality-btn" onclick="nextPersonalityQuestion()" disabled>Next →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Genre Mixer -->
+        <section class="genre-mixer">
+            <div class="container">
+                <h2 class="section-title">Genre Mixer</h2>
+                <p class="section-subtitle">
+                    Combine different genres to discover unique gaming experiences!
+                </p>
+                <div class="mixer-container">
+                    <div class="mixer-inputs">
+                        <div class="mixer-input-group">
+                            <label>Primary Genre:</label>
+                            <select id="primary-genre" class="mixer-select">
+                                <option value="">Select a genre...</option>
+                                <option value="action">Action</option>
+                                <option value="rpg">RPG</option>
+                                <option value="strategy">Strategy</option>
+                                <option value="puzzle">Puzzle</option>
+                                <option value="adventure">Adventure</option>
+                                <option value="simulation">Simulation</option>
+                                <option value="sports">Sports</option>
+                                <option value="horror">Horror</option>
+                            </select>
+                        </div>
+                        <div class="mixer-plus">+</div>
+                        <div class="mixer-input-group">
+                            <label>Secondary Genre:</label>
+                            <select id="secondary-genre" class="mixer-select">
+                                <option value="">Select a genre...</option>
+                                <option value="action">Action</option>
+                                <option value="rpg">RPG</option>
+                                <option value="strategy">Strategy</option>
+                                <option value="puzzle">Puzzle</option>
+                                <option value="adventure">Adventure</option>
+                                <option value="simulation">Simulation</option>
+                                <option value="sports">Sports</option>
+                                <option value="horror">Horror</option>
+                            </select>
+                        </div>
+                        <button class="mix-button" onclick="mixGenres()">Mix Genres!</button>
+                    </div>
+                    
+                    <div class="mixer-results" id="mixer-results">
+                        <!-- Results will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">GameBuddy</span>
+                </div>
+                <p class="footer-text">
+                    Discover your next favorite game with AI-powered recommendations.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script>
+        // Genre selection and personality test functionality
+        let currentPersonalityQuestion = 1;
+        let personalityAnswers = {};
+        const totalPersonalityQuestions = 3;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeGenreCards();
+            initializePersonalityTest();
+        });
+
+        function initializeGenreCards() {
+            const genreCards = document.querySelectorAll('.genre-card');
+            genreCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Toggle selection
+                    this.classList.toggle('selected');
+                    
+                    // Get selected genres
+                    const selectedGenres = Array.from(document.querySelectorAll('.genre-card.selected'))
+                        .map(card => card.dataset.genre);
+                    
+                    console.log('Selected genres:', selectedGenres);
+                });
+            });
+        }
+
+        function initializePersonalityTest() {
+            const personalityOptions = document.querySelectorAll('.personality-option');
+            personalityOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const question = this.closest('.test-question');
+                    const questionNum = question.dataset.question;
+                    const answer = this.dataset.answer;
+
+                    // Remove previous selection
+                    question.querySelectorAll('.personality-option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+
+                    // Add selection to clicked option
+                    this.classList.add('selected');
+
+                    // Store answer
+                    personalityAnswers[questionNum] = answer;
+
+                    // Enable next button
+                    document.getElementById('next-personality-btn').disabled = false;
+                });
+            });
+        }
+
+        function nextPersonalityQuestion() {
+            if (currentPersonalityQuestion < totalPersonalityQuestions) {
+                // Hide current question
+                document.querySelector(`[data-question="${currentPersonalityQuestion}"]`).classList.remove('active');
+                
+                // Show next question
+                currentPersonalityQuestion++;
+                document.querySelector(`[data-question="${currentPersonalityQuestion}"]`).classList.add('active');
+                
+                // Update navigation
+                updatePersonalityNavigation();
+                
+                // Disable next button until answer is selected
+                document.getElementById('next-personality-btn').disabled = true;
+                
+                // Check if answer already exists for this question
+                if (personalityAnswers[currentPersonalityQuestion]) {
+                    const selectedOption = document.querySelector(`[data-question="${currentPersonalityQuestion}"] .personality-option[data-answer="${personalityAnswers[currentPersonalityQuestion]}"]`);
+                    if (selectedOption) {
+                        selectedOption.classList.add('selected');
+                        document.getElementById('next-personality-btn').disabled = false;
+                    }
+                }
+            } else {
+                showPersonalityResults();
+            }
+        }
+
+        function previousPersonalityQuestion() {
+            if (currentPersonalityQuestion > 1) {
+                document.querySelector(`[data-question="${currentPersonalityQuestion}"]`).classList.remove('active');
+                currentPersonalityQuestion--;
+                document.querySelector(`[data-question="${currentPersonalityQuestion}"]`).classList.add('active');
+                updatePersonalityNavigation();
+                
+                // Check if answer exists for this question
+                if (personalityAnswers[currentPersonalityQuestion]) {
+                    document.getElementById('next-personality-btn').disabled = false;
+                }
+            }
+        }
+
+        function updatePersonalityNavigation() {
+            document.getElementById('current-personality-question').textContent = currentPersonalityQuestion;
+            document.getElementById('prev-personality-btn').disabled = currentPersonalityQuestion === 1;
+            
+            if (currentPersonalityQuestion === totalPersonalityQuestions) {
+                document.getElementById('next-personality-btn').textContent = 'See Results →';
+            } else {
+                document.getElementById('next-personality-btn').textContent = 'Next →';
+            }
+        }
+
+        function showPersonalityResults() {
+            // Hide test questions
+            document.querySelectorAll('.test-question').forEach(q => q.classList.remove('active'));
+            
+            // Calculate personality type
+            const personality = calculatePersonalityType();
+            
+            // Show results
+            document.getElementById('personality-type').textContent = personality.type;
+            document.getElementById('personality-description').innerHTML = personality.description;
+            document.getElementById('recommended-genres').innerHTML = personality.genres;
+            document.getElementById('personality-results').style.display = 'block';
+            
+            // Hide navigation
+            document.querySelector('.test-navigation').style.display = 'none';
+        }
+
+        function calculatePersonalityType() {
+            const motivation = personalityAnswers['1'];
+            const timeStyle = personalityAnswers['2'];
+            const challenge = personalityAnswers['3'];
+
+            // Simple personality type calculation
+            if (motivation === 'achievement' && challenge === 'hardcore') {
+                return {
+                    type: 'The Achiever',
+                    description: `
+                        <p>You're driven by mastery and completion. You love challenging games that test your skills and reward dedication.</p>
+                        <p><strong>Gaming Style:</strong> Hardcore, competitive, skill-focused</p>
+                    `,
+                    genres: `
+                        <h4>Perfect Genres for You:</h4>
+                        <div class="genre-recommendations">
+                            <span class="genre-rec">Action</span>
+                            <span class="genre-rec">Strategy</span>
+                            <span class="genre-rec">Sports</span>
+                            <span class="genre-rec">Competitive Multiplayer</span>
+                        </div>
+                    `
+                };
+            } else if (motivation === 'story') {
+                return {
+                    type: 'The Storyteller',
+                    description: `
+                        <p>You're drawn to rich narratives and emotional experiences. Games are your favorite interactive stories.</p>
+                        <p><strong>Gaming Style:</strong> Narrative-focused, immersive, character-driven</p>
+                    `,
+                    genres: `
+                        <h4>Perfect Genres for You:</h4>
+                        <div class="genre-recommendations">
+                            <span class="genre-rec">RPG</span>
+                            <span class="genre-rec">Adventure</span>
+                            <span class="genre-rec">Visual Novel</span>
+                            <span class="genre-rec">Narrative Action</span>
+                        </div>
+                    `
+                };
+            } else if (motivation === 'creativity') {
+                return {
+                    type: 'The Creator',
+                    description: `
+                        <p>You love building, crafting, and expressing your creativity in virtual worlds. Games are your canvas.</p>
+                        <p><strong>Gaming Style:</strong> Creative, open-ended, sandbox</p>
+                    `,
+                    genres: `
+                        <h4>Perfect Genres for You:</h4>
+                        <div class="genre-recommendations">
+                            <span class="genre-rec">Simulation</span>
+                            <span class="genre-rec">Sandbox</span>
+                            <span class="genre-rec">Building</span>
+                            <span class="genre-rec">Creative RPG</span>
+                        </div>
+                    `
+                };
+            } else if (motivation === 'social') {
+                return {
+                    type: 'The Social Gamer',
+                    description: `
+                        <p>Gaming is better with friends! You love shared experiences and community aspects of gaming.</p>
+                        <p><strong>Gaming Style:</strong> Multiplayer, cooperative, community-focused</p>
+                    `,
+                    genres: `
+                        <h4>Perfect Genres for You:</h4>
+                        <div class="genre-recommendations">
+                            <span class="genre-rec">Multiplayer Action</span>
+                            <span class="genre-rec">Co-op Adventure</span>
+                            <span class="genre-rec">Party Games</span>
+                            <span class="genre-rec">MMO</span>
+                        </div>
+                    `
+                };
+            } else {
+                return {
+                    type: 'The Balanced Gamer',
+                    description: `
+                        <p>You enjoy variety in your gaming experiences and adapt to different types of games based on your mood.</p>
+                        <p><strong>Gaming Style:</strong> Flexible, diverse, well-rounded</p>
+                    `,
+                    genres: `
+                        <h4>Perfect Genres for You:</h4>
+                        <div class="genre-recommendations">
+                            <span class="genre-rec">Action-Adventure</span>
+                            <span class="genre-rec">RPG</span>
+                            <span class="genre-rec">Puzzle</span>
+                            <span class="genre-rec">Strategy</span>
+                        </div>
+                    `
+                };
+            }
+        }
+
+        function restartPersonalityTest() {
+            currentPersonalityQuestion = 1;
+            personalityAnswers = {};
+            
+            // Reset all questions
+            document.querySelectorAll('.test-question').forEach(q => {
+                q.classList.remove('active');
+                q.querySelectorAll('.personality-option').forEach(opt => opt.classList.remove('selected'));
+            });
+            
+            // Show first question
+            document.querySelector('[data-question="1"]').classList.add('active');
+            
+            // Hide results and show navigation
+            document.getElementById('personality-results').style.display = 'none';
+            document.querySelector('.test-navigation').style.display = 'flex';
+            
+            // Reset navigation
+            document.getElementById('current-personality-question').textContent = '1';
+            document.getElementById('prev-personality-btn').disabled = true;
+            document.getElementById('next-personality-btn').disabled = true;
+            document.getElementById('next-personality-btn').textContent = 'Next →';
+        }
+
+        function mixGenres() {
+            const primary = document.getElementById('primary-genre').value;
+            const secondary = document.getElementById('secondary-genre').value;
+            
+            if (!primary || !secondary) {
+                alert('Please select both genres!');
+                return;
+            }
+            
+            if (primary === secondary) {
+                alert('Please select different genres!');
+                return;
+            }
+            
+            const mixResult = getGenreMix(primary, secondary);
+            displayMixResults(mixResult);
+        }
+
+        function getGenreMix(primary, secondary) {
+            const mixes = {
+                'action-rpg': {
+                    name: 'Action RPG',
+                    description: 'Fast-paced combat meets deep character progression',
+                    examples: ['Diablo 4', 'Elden Ring', 'Monster Hunter', 'Dark Souls']
+                },
+                'action-puzzle': {
+                    name: 'Action Puzzle',
+                    description: 'Quick thinking under pressure with brain-teasing challenges',
+                    examples: ['Portal', 'Tetris Effect', 'Superhot', 'Baba Is You']
+                },
+                'rpg-strategy': {
+                    name: 'Strategy RPG',
+                    description: 'Tactical combat with character development and story',
+                    examples: ['Fire Emblem', 'XCOM', 'Divinity: Original Sin', 'Total War: Warhammer']
+                },
+                'adventure-puzzle': {
+                    name: 'Puzzle Adventure',
+                    description: 'Exploration and discovery through clever problem-solving',
+                    examples: ['The Witness', 'Myst', 'Professor Layton', 'Return of the Obra Dinn']
+                },
+                'simulation-strategy': {
+                    name: 'Management Strategy',
+                    description: 'Build and manage complex systems with strategic depth',
+                    examples: ['Cities: Skylines', 'Tropico', 'Anno', 'Planet Coaster']
+                },
+                'horror-action': {
+                    name: 'Horror Action',
+                    description: 'Intense combat against terrifying enemies',
+                    examples: ['Resident Evil', 'Dead Space', 'The Evil Within', 'Left 4 Dead 2']
+                }
+            };
+            
+            const key = `${primary}-${secondary}`;
+            const reverseKey = `${secondary}-${primary}`;
+            
+            return mixes[key] || mixes[reverseKey] || {
+                name: `${primary.charAt(0).toUpperCase() + primary.slice(1)}-${secondary.charAt(0).toUpperCase() + secondary.slice(1)}`,
+                description: 'A unique blend of genres creating exciting new gameplay possibilities!',
+                examples: ['Unique hybrid games combining both genres']
+            };
+        }
+
+        function displayMixResults(mixResult) {
+            const resultsContainer = document.getElementById('mixer-results');
+            resultsContainer.innerHTML = `
+                <div class="mix-result">
+                    <h3>${mixResult.name}</h3>
+                    <p>${mixResult.description}</p>
+                    <div class="example-games">
+                        <strong>Examples:</strong>
+                        <div class="game-examples">
+                            ${mixResult.examples.map(game => `<span class="game-tag">${game}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            resultsContainer.style.display = 'block';
+        }
+    </script>
+
+    <style>
+        .page-hero {
+            background: var(--gradient-bg);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: var(--text-white);
+        }
+
+        .page-hero-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .genre-explorer {
+            padding: 80px 0;
+        }
+
+        .genres-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .genre-card {
+            background: var(--text-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 3px solid transparent;
+            position: relative;
+        }
+
+        .genre-card:hover,
+        .genre-card.selected {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 60px rgba(5, 244, 249, 0.25);
+        }
+
+        .genre-card.selected::before {
+            content: '✓';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-color);
+            color: var(--text-white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .genre-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .genre-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .genre-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .genre-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background: var(--background-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .popular-games {
+            font-size: 0.875rem;
+            color: #888;
+            line-height: 1.4;
+        }
+
+        .popular-games strong {
+            color: var(--primary-color);
+        }
+
+        .genre-personality {
+            padding: 80px 0;
+            background: var(--background-color);
+        }
+
+        .personality-test {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--text-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 3rem;
+        }
+
+        .test-question {
+            display: none;
+        }
+
+        .test-question.active {
+            display: block;
+        }
+
+        .test-question h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .personality-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .personality-option {
+            background: var(--background-color);
+            border: 2px solid transparent;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: left;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .personality-option:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .personality-option.selected {
+            border-color: var(--accent-color);
+            background: rgba(5, 244, 249, 0.15);
+        }
+
+        .option-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .option-content h4 {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .option-content p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .test-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .test-nav-btn {
+            background: var(--accent-color);
+            color: var(--text-white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .test-nav-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .test-nav-btn:not(:disabled):hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .test-progress {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .test-results {
+            text-align: center;
+        }
+
+        .test-results h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .personality-description {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .genre-recommendations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .genre-rec {
+            background: var(--accent-color);
+            color: var(--text-white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .genre-mixer {
+            padding: 80px 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .mixer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mixer-inputs {
+            display: flex;
+            align-items: end;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .mixer-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .mixer-input-group label {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .mixer-select {
+            padding: 1rem;
+            border: 2px solid #eee;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            min-width: 200px;
+            transition: var(--transition);
+        }
+
+        .mixer-select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .mixer-plus {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin: 0 1rem;
+        }
+
+        .mix-button {
+            background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+            color: var(--text-white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mix-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(5, 244, 249, 0.4);
+        }
+
+        .mixer-results {
+            display: none;
+            background: var(--text-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
+
+        .mix-result h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .mix-result p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .example-games {
+            text-align: left;
+        }
+
+        .example-games strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .game-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .game-tag {
+            background: var(--accent-color);
+            color: var(--text-white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-link.active {
+            background: rgba(5, 244, 249, 0.2);
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .mixer-inputs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .mixer-plus {
+                margin: 0;
+                order: 2;
+            }
+            
+            .personality-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .test-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</body>
+</html>
