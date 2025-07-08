@@ -698,124 +698,27 @@
         }
 
         // AI chatbot integration
-       <script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
-        chatflowid: "c3391e46-db98-4534-a2fa-ea8d6a7553f8",
-        apiHost: "https://cloud.flowiseai.com",
-    })
+       <!-- Flowise Chatbot Embed -->
+<script src="https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"></script>
+<script>
+  window.onload = function () {
+    window.Chatbot.init({
+      chatflowid: "c3391e46-db98-4534-a2fa-ea8d6a7553f8",
+      apiHost: "https://cloud.flowiseai.com",
+      theme: {
+        button: {
+          backgroundColor: "#4F46E5",
+          iconColor: "#FFFFFF"
+        },
+        chatWindow: {
+          welcomeMessage: "Hi! I’m ChallengeChooser AI. Let’s find a game that fits you.",
+          backgroundColor: "#f9f9f9",
+          textColor: "#333333"
+        }
+      }
+    });
+  };
 </script>
-
-        function renderMarkdown(md) {
-            // Use marked.js for full markdown support
-            if (window.marked) {
-                return window.marked.parse(md);
-            }
-            // fallback: basic markdown to HTML conversion
-            let html = md
-                .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>') // bold
-                .replace(/\*(.*?)\*/g, '<i>$1</i>') // italics
-                .replace(/`([^`]+)`/g, '<code>$1</code>') // inline code
-                .replace(/\n/g, '<br>'); // line breaks
-            // Table: convert markdown table to HTML table (basic)
-            if (/^\s*\|.*\|/m.test(md)) {
-                html = html.replace(/((?:^\s*\|.*\|\s*\n?)+)/gm, function(table) {
-                    const rows = table.trim().split(/\n/).filter(Boolean);
-                    if (rows.length < 2) return table; // not a table
-                    const header = rows[0].replace(/\|/g, ' ').trim().split(/\s{2,}/);
-                    const aligns = rows[1];
-                    const bodyRows = rows.slice(2).map(r => r.replace(/\|/g, ' ').trim().split(/\s{2,}/));
-                    let htmlTable = '<table class="chat-table"><thead><tr>';
-                    header.forEach(h => htmlTable += `<th>${h}</th>`);
-                    htmlTable += '</tr></thead><tbody>';
-                    bodyRows.forEach(row => {
-                        htmlTable += '<tr>';
-                        row.forEach(cell => htmlTable += `<td>${cell}</td>`);
-                        htmlTable += '</tr>';
-                    });
-                    htmlTable += '</tbody></table>';
-                    return htmlTable;
-                });
-            }
-            return html;
-        }
-
-        // Initialize chat functionality
-        const chatInput = document.getElementById('chat-input');
-        const sendButton = document.getElementById('send-message');
-        const chatMessages = document.getElementById('chat-messages');
-
-        async function sendMessage() {
-            const message = chatInput.value.trim();
-            if (!message) return;
-
-            // Add user message
-            addMessage(message, 'user');
-            
-            // Clear input
-            chatInput.value = '';
-            
-            // Add typing indicator
-            const typingDiv = document.createElement('div');
-            typingDiv.className = 'message bot-message typing-indicator';
-            typingDiv.innerHTML = `
-                <div class="message-avatar">🤖</div>
-                <div class="message-content">
-                    <p style="color:#888;">ChallengeChooser AI is typing...</p>
-                </div>
-            `;
-            chatMessages.appendChild(typingDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-            
-            try {
-                const response = await query({"question": message});
-                let botMsg = response.text || JSON.stringify(response);
-                
-                // Remove typing indicator
-                chatMessages.removeChild(typingDiv);
-                
-                // Add AI response
-                addMessage(renderMarkdown(botMsg), 'bot');
-            } catch (err) {
-                // Remove typing indicator
-                chatMessages.removeChild(typingDiv);
-                addMessage('Sorry, there was a problem contacting ChallengeChooser AI. Please try again.', 'bot');
-            }
-        }
-
-        function addMessage(text, sender) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${sender}-message`;
-            
-            const avatar = document.createElement('div');
-            avatar.className = 'message-avatar';
-            avatar.textContent = sender === 'user' ? '👤' : '🤖';
-            
-            const content = document.createElement('div');
-            content.className = 'message-content';
-            content.innerHTML = `<p>${text}</p>`;
-            
-            messageDiv.appendChild(avatar);
-            messageDiv.appendChild(content);
-            
-            chatMessages.appendChild(messageDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        // Send message on button click
-        if (sendButton) {
-            sendButton.addEventListener('click', sendMessage);
-        }
-        
-        // Send message on Enter key
-        if (chatInput) {
-            chatInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    sendMessage();
-                }
-            });
-        }
-    </script>
 
     <style>
         .page-hero {
