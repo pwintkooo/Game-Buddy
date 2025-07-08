@@ -698,20 +698,13 @@
         }
 
         // AI chatbot integration
-        async function query(data) {
-            const response = await fetch(
-                "https://cloud.flowiseai.com/chatbot/c3391e46-db98-4534-a2fa-ea8d6a7553f8",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(data)
-                }
-            );
-            const result = await response.json();
-            return result;
-        }
+       <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "c3391e46-db98-4534-a2fa-ea8d6a7553f8",
+        apiHost: "https://cloud.flowiseai.com",
+    })
+</script>
 
         function renderMarkdown(md) {
             // Use marked.js for full markdown support
